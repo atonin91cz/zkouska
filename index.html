@@ -10,11 +10,290 @@
   <link rel="stylesheet" href="scss/custom.css">
 </head>
 <body>
-  <div class="container mt-5">
-    <h1 class="text-center text-primary">Bootstrap Test</h1>
-    <button class="btn btn-success">Klikni mě</button>
-  </div>
+      <div class="container">
+      <div class="row">
+        <div class="col"><div class="box"></div></div>
+      </div>
+    </div>
 
+    <!-- neuspořadane listy-->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col bg-warning text-dark p-3 rounded">
+          <ul class="list-unstyled">
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="container my-5">
+      <h2 class="text-primary">Seznam definic</h2>
+      <dl class="bg-light p-4 rounded">
+        <dt class="text-success">První termín</dt>
+        <dd class="text-muted ps-3">Výklad prvního termínu</dd>
+        <dt class="text-danger">Druhý termín</dt>
+        <dd class="text-muted ps-3">Výklad druhého termínu</dd>
+      </dl>
+    </section>
+
+    <div class="container mt-5 text-center">
+      <h3 class="text-primary">Obrázky vedle sebe</h3>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <img
+          src="https://picsum.photos/id/28/400/200"
+          alt="Cesta 1"
+          class="img-fluid rounded"
+          title="Obrázek 1"
+        />
+        <img
+          src="https://picsum.photos/id/28/400/200"
+          alt="Cesta 2"
+          class="img-fluid rounded"
+          title="Obrázek 2"
+        />
+      </div>
+    </div>
+    <div class="container mt-5">
+      <h3 class="text-primary mb-4">Výběr zvířátka</h3>
+      <div class="mb-3">
+        <label for="mazlicci" class="form-label">Vyberte zvířátko:</label>
+        <select
+          class="form-select"
+          name="zvirata"
+          id="mazlicci"
+          style="width: 200px"
+        >
+          <option value="Pes">Pes</option>
+          <option value="Kočka">Kočka</option>
+          <option value="Křeček" selected>Křeček</option>
+          <option value="Papoušek">Papoušek</option>
+          <option value="Želva">Želva</option>
+          <option value="Rybičky">Rybičky</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container mt-5 bg-custom-light">
+      <h3 class="text-primary mb-4">Oblíbené jídlo</h3>
+      <div class="mb-3">
+        <label for="food" class="form-label">Vyberte své oblíbené jídlo:</label>
+        <select
+          class="form-select"
+          id="food"
+          name="jidlo"
+          multiple
+          size="4"
+          style="width: 200px"
+        >
+          <optgroup label="Omáčky">
+            <option value="Svíčková">Svíčková</option>
+            <option value="Koprovka">Koprovka</option>
+            <option value="Zelí" disabled>Zelí</option>
+          </optgroup>
+          <optgroup label="Smažené">
+            <option value="Řízek">Řízek</option>
+            <option value="Smažák">Smažák</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h3 class="text-primary mb-4">Formulář pro výběr zeleniny</h3>
+      <form>
+        <div class="mb-3">
+          <label for="zelenina" class="form-label">Vyberte zeleninu:</label>
+          <input
+            type="text"
+            id="zelenina"
+            class="form-control"
+            list="zeleniny"
+            placeholder="Začněte psát..."
+          />
+          <datalist id="zeleniny">
+            <option value="Mrkev"></option>
+            <option value="Cibule"></option>
+            <option value="Petržel"></option>
+          </datalist>
+        </div>
+        <button type="submit" class="btn btn-success">Odeslat</button>
+      </form>
+    </div>
+
+    <div class="container mt-5">
+      <h3 class="text-primary mb-4">MIX prvků</h3>
+      <form>
+        <!-- Textarea -->
+        <div class="mb-3">
+          <label for="textarea" class="form-label">Textové pole:</label>
+          <textarea id="textarea" name="textarea" class="form-control" rows="3">
+Předvyplněný text</textarea
+          >
+        </div>
+
+        <!-- Text -->
+        <div class="mb-3">
+          <label for="text" class="form-label">Text:</label>
+          <input
+            type="text"
+            id="text"
+            name="text"
+            class="form-control"
+            placeholder="Text"
+          />
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="pass" class="form-label">Password:</label>
+          <input type="password" id="pass" name="pass" class="form-control" />
+        </div>
+
+        <!-- Search -->
+        <div class="mb-3">
+          <label for="search" class="form-label">Hledání:</label>
+          <input
+            type="search"
+            id="search"
+            name="search"
+            class="form-control"
+            placeholder="Hledat"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Email"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success">Odeslat</button>
+      </form>
+    </div>
+
+    <div class="container mt-5">
+      <h3 class="text-primary mb-4">Formulář pro výběr údajů</h3>
+      <form>
+        <!-- Datum -->
+        <div class="mb-3">
+          <label for="date" class="form-label">Datum:</label>
+          <input type="date" id="date" class="form-control" />
+        </div>
+
+        <!-- Čas -->
+        <div class="mb-3">
+          <label for="time" class="form-label">Čas:</label>
+          <input type="time" id="time" class="form-control" />
+        </div>
+
+        <!-- Barva -->
+        <div class="mb-3">
+          <label for="color" class="form-label">Barva:</label>
+          <input
+            type="color"
+            id="color"
+            class="form-control form-control-color"
+            value="#6495ED"
+          />
+        </div>
+
+        <!-- Soubory -->
+        <div class="mb-3">
+          <label for="file" class="form-label">Soubory:</label>
+          <input type="file" id="file" class="form-control" />
+        </div>
+
+        <!-- Posuvník rozsahu -->
+        <div class="mb-3">
+          <label for="range" class="form-label">Posuvník rozsahu:</label>
+          <input
+            type="range"
+            id="range"
+            class="form-range"
+            min="0"
+            max="70"
+            value="50"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success">Odeslat</button>
+      </form>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-primary mb-4">Ostatní</h2>
+      <div class="accordion" id="accordionExample">
+        <!-- První accordion položka -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              A1
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Druhá accordion položka -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              A2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <ul>
+                <li>Vestibulum id elit quis massa interdum sodales.</li>
+                <li>
+                  Nunc quis eros vel odio pretium tincidunt nec quis neque.
+                </li>
+                <li>Quisque sed eros non eros ornare elementum.</li>
+                <li>
+                  Cras sed libero aliquet, porta dolor quis, dapibus ipsum.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
