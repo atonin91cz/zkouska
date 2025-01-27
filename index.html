@@ -73,6 +73,14 @@
         font-weight: bold;
         color: #333;
       }
+     @media (max-width: 767px) {
+        #about h3 {
+          font-size: 1.5rem;
+        }
+        #about p {
+          font-size: 1rem;
+        }
+      }
     </style>
 
   
@@ -224,26 +232,43 @@
     </div>
 
     <!-- O nás Section -->
-    <section id="about" class="container my-5">
+   <section id="about" class="container my-5">
       <h2 class="text-center text-primary mb-4">O nás</h2>
       <div class="row">
+        <!-- První sloupec -->
         <div class="col-md-4">
-          <img src="images/onas1.jpg" class="img-fluid mb-3" alt="Image 1" />
-          <h3>Podnadpis 1</h3>
-          <p class="fw-light">
-            <span class="span1">Lorem ipsum dolor sit amet...</span>
+          <img
+            src="/images/onas1.jpg"
+            class="img-fluid mb-3 d-none d-md-block"
+            alt="Image 1"
+          />
+          <h3 class="text-center">Podnadpis 1</h3>
+          <p class="fw-light text-center span1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
+        <!-- Druhý sloupec -->
         <div class="col-md-4">
-          <img src="images/onas2.jpg" class="img-fluid mb-3" alt="Image 2" />
-          <h3>Podnadpis 2</h3>
-          <p class="fw-light">  <span class="span2">Lorem ipsum dolor sit amet...</span></p>
+          <img
+            src="/images/onas2.jpg"
+            class="img-fluid mb-3 d-none d-md-block"
+            alt="Image 2"
+          />
+          <h3 class="text-center">Podnadpis 2</h3>
+          <p class="fw-light text-center span2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </div>
+        <!-- Třetí sloupec -->
         <div class="col-md-4">
-          <img src="images/onas3.jpg" class="img-fluid mb-3" alt="Image 3" />
-          <h3>Podnadpis 3</h3>
-          <p class="fw-light">
-            <span class="span3">Lorem ipsum dolor sit amet...</span>
+          <img
+            src="/images/onas3.jpg"
+            class="img-fluid mb-3 d-none d-md-block"
+            alt="Image 3"
+          />
+          <h3 class="text-center">Podnadpis 3</h3>
+          <p class="fw-light text-center span3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
       </div>
