@@ -107,31 +107,115 @@
         </div>
       </div>
     </nav>
-
-    <!-- Home Section -->
+ <!-- Home Section -->
     <section id="home" class="home-section">
       <div class="text-center">
         <h1 class="display-1">Sea Life Exhibition</h1>
         <p class="fs-4">Welcome to the Underwater World</p>
         <div class="mt-4 d-flex justify-content-center gap-3">
+          <!-- Button to Trigger Modal -->
           <button
             class="btn btn-success btn-lg"
             data-bs-toggle="modal"
             data-bs-target="#reservationModal"
           >
-            <a
-              href="#contactt"
-              class="btn btn-success btn-lg text-decoration-none text-white"
-            >
-              Rezervace vstupenek
-            </a>
+            Rezervace vstupenek
           </button>
-          <a href="images/sekcehome.jpg" class="btn btn-outline-light btn-lg"
-            >Více informací</a
-          >
+          <a href="images/sekcehome.jpg" class="btn btn-outline-light btn-lg">
+            Více informací
+          </a>
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="reservationModal"
+      tabindex="-1"
+      aria-labelledby="reservationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="reservationModalLabel">
+              Rezervace vstupenek
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Zavřít"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Reservation Form -->
+            <form>
+              <!-- Jméno -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Jméno</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Vaše jméno"
+                  required
+                />
+              </div>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Váš email"
+                  required
+                />
+              </div>
+              <!-- Telefon -->
+              <div class="mb-3">
+                <label for="phone" class="form-label">Telefon</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="form-control"
+                  placeholder="Váš telefon"
+                  required
+                />
+              </div>
+              <!-- Počet vstupenek -->
+              <div class="mb-3">
+                <label for="tickets" class="form-label">Počet vstupenek</label>
+                <input
+                  type="number"
+                  id="tickets"
+                  class="form-control"
+                  placeholder="Počet vstupenek"
+                  required
+                />
+              </div>
+              <!-- Datum -->
+              <div class="mb-3">
+                <label for="date" class="form-label">Datum</label>
+                <input type="date" id="date" class="form-control" required />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Zavřít
+            </button>
+            <button type="submit" class="btn btn-primary">Odeslat</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- O nás Section -->
     <section id="about" class="container my-5">
