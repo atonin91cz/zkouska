@@ -1,300 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Bootstrap</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQ5Wl7SNG+JXv0aWe/J2BZPPFIMKh2b9fRUcIb6WU4DhYN" crossorigin="anonymous">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="scss/custom.css">
-</head>
-<body>
-      <div class="container">
-      <div class="row">
-        <div class="col"><div class="box"></div></div>
-      </div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Antonín Tomeček" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antonín Tomeček</title>
+    <link rel="stylesheet" href="/scss/custom.css" />
 
-    <!-- neuspořadane listy-->
-    <div class="container mt-3">
-      <div class="row">
-        <div class="col bg-warning text-dark p-3 rounded">
-          <ul class="list-unstyled">
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Playwrite+IN:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .box {
+        background-color: rgb(164, 162, 158);
+        min-height: 100px;
+        border: 2px;
+        border-radius: 6px;
+        width: 100%;
+      }
+      .bg-custom-light {
+        background-color: #87b69b;
+        border-radius: 20px;
+        padding: 2rem;
+      }
+
+      .home-section {
+        height: 100vh;
+        background-image: url("images/sekcehome.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+      }
+
+      .span1 {
+        font-family: "Lexend Giga", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .span3 {
+        font-family: "Playwrite IN", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .form-label {
+        font-family: "Lexend Giga", serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Výstava</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">O nás</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Galerie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#posudky">Ohlasy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Kontakt</a>
+            </li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <section class="container my-5">
-      <h2 class="text-primary">Seznam definic</h2>
-      <dl class="bg-light p-4 rounded">
-        <dt class="text-success">První termín</dt>
-        <dd class="text-muted ps-3">Výklad prvního termínu</dd>
-        <dt class="text-danger">Druhý termín</dt>
-        <dd class="text-muted ps-3">Výklad druhého termínu</dd>
-      </dl>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+      <div class="text-center">
+        <h1 class="display-1">Sea Life Exhibition</h1>
+        <p class="fs-4">Welcome to the Underwater World</p>
+        <div class="mt-4 d-flex justify-content-center gap-3">
+          <button
+            class="btn btn-success btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#reservationModal"
+          >
+            <a
+              href="#contactt"
+              class="btn btn-success btn-lg text-decoration-none text-white"
+            >
+              Rezervace vstupenek
+            </a>
+          </button>
+          <a href="images/sekcehome.jpg" class="btn btn-outline-light btn-lg"
+            >Více informací</a
+          >
+        </div>
+      </div>
     </section>
 
-    <div class="container mt-5 text-center">
-      <h3 class="text-primary">Obrázky vedle sebe</h3>
-      <div class="d-flex justify-content-center gap-3 mt-4">
-        <img
-          src="https://picsum.photos/id/28/400/200"
-          alt="Cesta 1"
-          class="img-fluid rounded"
-          title="Obrázek 1"
-        />
-        <img
-          src="https://picsum.photos/id/28/400/200"
-          alt="Cesta 2"
-          class="img-fluid rounded"
-          title="Obrázek 2"
-        />
+    <!-- O nás Section -->
+    <section id="about" class="container my-5">
+      <h2 class="text-center text-primary mb-4">O nás</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="/images/1.JPG" class="img-fluid mb-3" alt="Image 1" />
+          <h3>Podnadpis 1</h3>
+          <p class="fw-light">
+            <span class="span1">Lorem ipsum dolor sit amet...</span>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="/images/2.JPG" class="img-fluid mb-3" alt="Image 2" />
+          <h3>Podnadpis 2</h3>
+          <p class="fw-light">Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="col-md-4">
+          <img src="/images/3.JPG" class="img-fluid mb-3" alt="Image 3" />
+          <h3>Podnadpis 3</h3>
+          <p class="fw-light">
+            <span class="span3">Lorem ipsum dolor sit amet...</span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="container mt-5">
-      <h3 class="text-primary mb-4">Výběr zvířátka</h3>
-      <div class="mb-3">
-        <label for="mazlicci" class="form-label">Vyberte zvířátko:</label>
-        <select
-          class="form-select"
-          name="zvirata"
-          id="mazlicci"
-          style="width: 200px"
+    </section>
+
+    <!-- Galerie Section -->
+    <div class="container">
+      <section id="gallery" class="my-5">
+        <h2 class="text-center text-primary mb-4">Galerie</h2>
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
         >
-          <option value="Pes">Pes</option>
-          <option value="Kočka">Kočka</option>
-          <option value="Křeček" selected>Křeček</option>
-          <option value="Papoušek">Papoušek</option>
-          <option value="Želva">Želva</option>
-          <option value="Rybičky">Rybičky</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="container mt-5 bg-custom-light">
-      <h3 class="text-primary mb-4">Oblíbené jídlo</h3>
-      <div class="mb-3">
-        <label for="food" class="form-label">Vyberte své oblíbené jídlo:</label>
-        <select
-          class="form-select"
-          id="food"
-          name="jidlo"
-          multiple
-          size="4"
-          style="width: 200px"
-        >
-          <optgroup label="Omáčky">
-            <option value="Svíčková">Svíčková</option>
-            <option value="Koprovka">Koprovka</option>
-            <option value="Zelí" disabled>Zelí</option>
-          </optgroup>
-          <optgroup label="Smažené">
-            <option value="Řízek">Řízek</option>
-            <option value="Smažák">Smažák</option>
-          </optgroup>
-        </select>
-      </div>
-    </div>
-
-    <div class="container mt-5">
-      <h3 class="text-primary mb-4">Formulář pro výběr zeleniny</h3>
-      <form>
-        <div class="mb-3">
-          <label for="zelenina" class="form-label">Vyberte zeleninu:</label>
-          <input
-            type="text"
-            id="zelenina"
-            class="form-control"
-            list="zeleniny"
-            placeholder="Začněte psát..."
-          />
-          <datalist id="zeleniny">
-            <option value="Mrkev"></option>
-            <option value="Cibule"></option>
-            <option value="Petržel"></option>
-          </datalist>
-        </div>
-        <button type="submit" class="btn btn-success">Odeslat</button>
-      </form>
-    </div>
-
-    <div class="container mt-5">
-      <h3 class="text-primary mb-4">MIX prvků</h3>
-      <form>
-        <!-- Textarea -->
-        <div class="mb-3">
-          <label for="textarea" class="form-label">Textové pole:</label>
-          <textarea id="textarea" name="textarea" class="form-control" rows="3">
-Předvyplněný text</textarea
-          >
-        </div>
-
-        <!-- Text -->
-        <div class="mb-3">
-          <label for="text" class="form-label">Text:</label>
-          <input
-            type="text"
-            id="text"
-            name="text"
-            class="form-control"
-            placeholder="Text"
-          />
-        </div>
-
-        <!-- Password -->
-        <div class="mb-3">
-          <label for="pass" class="form-label">Password:</label>
-          <input type="password" id="pass" name="pass" class="form-control" />
-        </div>
-
-        <!-- Search -->
-        <div class="mb-3">
-          <label for="search" class="form-label">Hledání:</label>
-          <input
-            type="search"
-            id="search"
-            name="search"
-            class="form-control"
-            placeholder="Hledat"
-          />
-        </div>
-
-        <!-- Email -->
-        <div class="mb-3">
-          <label for="email" class="form-label">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Email"
-          />
-        </div>
-
-        <button type="submit" class="btn btn-success">Odeslat</button>
-      </form>
-    </div>
-
-    <div class="container mt-5">
-      <h3 class="text-primary mb-4">Formulář pro výběr údajů</h3>
-      <form>
-        <!-- Datum -->
-        <div class="mb-3">
-          <label for="date" class="form-label">Datum:</label>
-          <input type="date" id="date" class="form-control" />
-        </div>
-
-        <!-- Čas -->
-        <div class="mb-3">
-          <label for="time" class="form-label">Čas:</label>
-          <input type="time" id="time" class="form-control" />
-        </div>
-
-        <!-- Barva -->
-        <div class="mb-3">
-          <label for="color" class="form-label">Barva:</label>
-          <input
-            type="color"
-            id="color"
-            class="form-control form-control-color"
-            value="#6495ED"
-          />
-        </div>
-
-        <!-- Soubory -->
-        <div class="mb-3">
-          <label for="file" class="form-label">Soubory:</label>
-          <input type="file" id="file" class="form-control" />
-        </div>
-
-        <!-- Posuvník rozsahu -->
-        <div class="mb-3">
-          <label for="range" class="form-label">Posuvník rozsahu:</label>
-          <input
-            type="range"
-            id="range"
-            class="form-range"
-            min="0"
-            max="70"
-            value="50"
-          />
-        </div>
-
-        <button type="submit" class="btn btn-success">Odeslat</button>
-      </form>
-    </div>
-
-    <div class="container mt-5">
-      <h2 class="text-primary mb-4">Ostatní</h2>
-      <div class="accordion" id="accordionExample">
-        <!-- První accordion položka -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              A1
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/images/gal1.jpg" class="d-block w-100" alt="Slide 1" />
+            </div>
+            <div class="carousel-item">
+              <img src="/images/gal2.jpg" class="d-block w-100" alt="Slide 2" />
+            </div>
+            <div class="carousel-item">
+              <img src="/images/gal3.jpg" class="d-block w-100" alt="Slide 3" />
             </div>
           </div>
-        </div>
-
-        <!-- Druhá accordion položka -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
-              A2
-            </button>
-          </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
           >
-            <div class="accordion-body">
-              <ul>
-                <li>Vestibulum id elit quis massa interdum sodales.</li>
-                <li>
-                  Nunc quis eros vel odio pretium tincidunt nec quis neque.
-                </li>
-                <li>Quisque sed eros non eros ornare elementum.</li>
-                <li>
-                  Cras sed libero aliquet, porta dolor quis, dapibus ipsum.
-                </li>
-              </ul>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Ohlasy Section -->
+    <section id="posudky" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center text-primary mb-4">Ohlasy návštěvníků</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jana Nováková</h5>
+                <p class="card-text">
+                  "Úžasná výstava, která mi přiblížila podmořský svět. Určitě
+                  doporučuji!"
+                </p>
+              </div>
+              <div class="card-footer text-center text-muted">★★★★☆</div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Petr Dvořák</h5>
+                <p class="card-text">
+                  "Bylo to velmi inspirativní a děti si to opravdu užily!"
+                </p>
+              </div>
+              <div class="card-footer text-center text-muted">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Eliška Horáková</h5>
+                <p class="card-text">
+                  "Krásné zobrazení podmořského života. Moc hezky udělané."
+                </p>
+              </div>
+              <div class="card-footer text-center text-muted">★★★★☆</div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Tomáš Svoboda</h5>
+                <p class="card-text">
+                  "Skvělý zážitek, určitě přijdu znovu. Doporučuji všem!"
+                </p>
+              </div>
+              <div class="card-footer text-center text-muted">★★★★★</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    </section>
+
+    <section id="contact" class="bg-light py-5">
+      <div class="container bg-custom-light" id="contactt">
+        <h2 class="text-center text-primary mb-4">Kontaktujte nás</h2>
+        <form>
+          <div class="row g-3">
+            <!-- Jméno -->
+            <div class="col-md-6">
+              <label for="name" class="form-label">Jméno</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Vaše jméno"
+                required
+              />
+            </div>
+            <!-- Email -->
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Váš email"
+                required
+              />
+            </div>
+          </div>
+          <div class="row g-3 mt-3">
+            <!-- Předmět -->
+            <div class="col-md-12">
+              <label for="subject" class="form-label">Předmět</label>
+              <input
+                type="text"
+                id="subject"
+                class="form-control"
+                placeholder="Předmět zprávy"
+                required
+              />
+            </div>
+          </div>
+          <div class="row g-3 mt-3">
+            <!-- Zpráva -->
+            <div class="col-md-12">
+              <label for="message" class="form-label">Zpráva</label>
+              <textarea
+                id="message"
+                class="form-control"
+                rows="5"
+                placeholder="Vaše zpráva"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Odeslat
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="map" class="py-5">
+      <div class="container">
+        <h2 class="text-center text-primary mb-4">Najdete nás zde</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.281220170948!2d18.164025696544616!3d49.83217079387786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e4e2d424e2c5%3A0xfe99a98da4b6280a!2zVnlzb2vDoSDFoWtvbGEgYsOhxYhza8OhIC0gVGVjaG5pY2vDoSB1bml2ZXJ6aXRhIE9zdHJhdmE!5e1!3m2!1scs!2scz!4v1737968762246!5m2!1scs!2scz"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-secondary text-white py-3">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <span class="copy d-block mb-3">
+              <strong>Copyright ©</strong> 2024 Antonín Tomeček Company. All
+              rights reserved.
+            </span>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img
+                  class="icon"
+                  src="images/facebook_1.svg"
+                  alt="Facebook"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <a href="https://instagram.com/" target="_blank">
+                <img
+                  class="icon"
+                  src="images/instagram.svg"
+                  alt="Instagram"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <a href="https://x.com/" target="_blank">
+                <img
+                  class="icon"
+                  src="images/twitter.svg"
+                  alt="Twitter"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <a href="https://youtube.com/" target="_blank">
+                <img
+                  class="icon"
+                  src="images/youtube.svg"
+                  alt="YouTube"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
